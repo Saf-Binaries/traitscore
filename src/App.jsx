@@ -14,6 +14,7 @@ import {
   Mail,
   MapPin,
   Menu,
+  MessageCircle,
   ShieldCheck,
   Users,
   Wind,
@@ -376,7 +377,7 @@ function App() {
                           Enquire Now <ArrowRight size={14} />
                         </a>
                         <a className="service-whatsapp" href={waUrl} target="_blank" rel="noreferrer" aria-label={`WhatsApp about ${service.title}`}>
-                          WhatsApp
+                          <MessageCircle size={16} />
                         </a>
                       </div>
                     </div>
