@@ -157,6 +157,13 @@ button { cursor: pointer; }
   color: var(--gold-dark); background: #f6efe2;
 }
 .service-body h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.2; font-weight: 550; }
+.service-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
 .service-body p { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.7; }
 .service-points { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; }
 .service-points li {
@@ -173,6 +180,7 @@ button { cursor: pointer; }
   color: var(--gold-dark);
 }
 .service-body a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 12px; font-weight: 650; }
+.service-enquire { margin-top: auto; padding-top: 14px; align-self: flex-start; }
 
 /* About */
 .about { background: #fff; }
