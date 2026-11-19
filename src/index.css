@@ -145,27 +145,63 @@ button { cursor: pointer; }
 .services { background: var(--bg); }
 .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .service-card {
-  background: #fff; border: 1px solid var(--line); overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--line);
+  overflow: hidden;
   box-shadow: 0 12px 30px rgba(16,35,48,0.05);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
-.service-image { aspect-ratio: 4 / 3; overflow: hidden; background: #d9dee0; }
-.service-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 500ms ease; }
-.service-card:hover .service-image img { transform: scale(1.05); }
-.service-body { padding: 22px; }
-.service-icon {
-  width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 14px;
-  color: var(--gold-dark); background: #f6efe2;
+.service-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #d9dee0;
+  flex-shrink: 0;
 }
-.service-body h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.2; font-weight: 550; }
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 500ms ease;
+}
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
 .service-body {
   padding: 22px;
   display: flex;
   flex-direction: column;
   flex: 1;
-  min-height: 0;
 }
-.service-body p { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.7; }
-.service-points { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; }
+.service-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  color: var(--gold-dark);
+  background: #f6efe2;
+}
+.service-body h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 550;
+}
+.service-body p {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+.service-points {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+  display: grid;
+  gap: 8px;
+}
 .service-points li {
   display: flex;
   align-items: flex-start;
@@ -179,7 +215,14 @@ button { cursor: pointer; }
   margin-top: 2px;
   color: var(--gold-dark);
 }
-.service-body a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 12px; font-weight: 650; }
+.service-body a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 650;
+}
 .service-enquire {
   margin-top: auto;
   padding-top: 16px;
