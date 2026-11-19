@@ -69,6 +69,16 @@ const services = [
     title: 'Electrical Engineering',
     description:
       'Power distribution, lighting, generators, earthing and testing solutions designed for safe, reliable building operation.',
+    points: [
+      'Low-voltage system design and installation',
+      'Power distribution networks & panel board installation',
+      'Lighting design, supply and installation',
+      'Generator systems, ATS panels and backup power solutions',
+      'Earthing and lightning protection systems',
+      'Electrical testing, commissioning and certification',
+      'Preventive maintenance for electrical systems',
+      'Electrical system retrofit projects',
+    ],
   },
   {
     icon: Wind,
@@ -76,6 +86,16 @@ const services = [
     title: 'HVAC',
     description:
       'Chilled water, ventilation, air distribution and commissioning services that balance comfort with long-term performance.',
+    points: [
+      'Chilled water system installation and commissioning',
+      'ABU, FAHU/FCU, VRF/VRV systems, package units and DX systems',
+      'Ventilation and fresh air systems',
+      'Air distribution, ducting and airflow balancing',
+      'Indoor air quality improvement solutions',
+      'Energy optimisation and HVAC performance tuning',
+      'Complete HVAC testing and commissioning',
+      'HVAC retrofit projects',
+    ],
   },
   {
     icon: Wrench,
@@ -83,6 +103,16 @@ const services = [
     title: 'Plumbing',
     description:
       'Water supply, drainage, pumps and maintenance solutions delivered with proper coordination and maintainability.',
+    points: [
+      'Water supply system design and installation using PPR, HDPE, UPVC, Flexible PVC and Flexible SS',
+      'Drainage and sewerage networks',
+      'Pump installations and booster systems',
+      'Irrigation networks and control systems',
+      'Water storage tanks, filtration and dosing systems',
+      'Plumbing maintenance and leak detection',
+      'Grease trap and wastewater management solutions',
+      'Plumbing system retrofit projects',
+    ],
   },
   {
     icon: Building2,
@@ -90,6 +120,18 @@ const services = [
     title: 'Civil Engineering',
     description:
       'Refurbishment, structural repairs, waterproofing and fit-out works that protect the condition and value of your assets.',
+    points: [
+      'Building refurbishment',
+      'Structural repairs',
+      'Concrete restoration',
+      'Masonry works',
+      'Waterproofing systems',
+      'Tiling and flooring',
+      'Painting and decorative finishes',
+      'Ceiling and partition works',
+      'Interior fit-out support',
+      'Building maintenance',
+    ],
   },
 ]
 
@@ -317,6 +359,16 @@ function App() {
                       <span className="service-icon"><Icon size={20} /></span>
                       <h3>{service.title}</h3>
                       <p>{service.description}</p>
+                      {service.points?.length ? (
+                        <ul className="service-points">
+                          {service.points.map((point) => (
+                            <li key={point}>
+                              <CheckCircle2 size={14} aria-hidden="true" />
+                              <span>{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
                       <a href="#contact">Enquire Now <ArrowRight size={14} /></a>
                     </div>
                   </article>

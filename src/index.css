@@ -157,7 +157,21 @@ button { cursor: pointer; }
   color: var(--gold-dark); background: #f6efe2;
 }
 .service-body h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.2; font-weight: 550; }
-.service-body p { margin: 0 0 16px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.service-body p { margin: 0 0 14px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.service-points { list-style: none; padding: 0; margin: 0 0 18px; display: grid; gap: 8px; }
+.service-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+.service-points li svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--gold-dark);
+}
 .service-body a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 12px; font-weight: 650; }
 
 /* About */
