@@ -538,34 +538,30 @@ function App() {
 
       <div className={`wa-fab${whatsappOpen ? ' is-open' : ''}`} aria-live="polite">
         {whatsappOpen ? (
-          <div className="wa-popup">
-            <div className="wa-popup-head">
-              <span className="wa-popup-title">Chat on WhatsApp</span>
-              <button type="button" className="wa-close" aria-label="Close WhatsApp prompt" onClick={() => setWhatsappOpen(false)}>
-                <X size={18} />
-              </button>
-            </div>
-            <p className="wa-popup-text">Need help? Message us on WhatsApp for a quick reply.</p>
-            <p className="wa-popup-number">+971 50 324 7488</p>
+          <div className="wa-bubble" role="dialog" aria-label="WhatsApp contact">
+            <button type="button" className="wa-bubble-close" aria-label="Close" onClick={() => setWhatsappOpen(false)}>
+              <X size={16} />
+            </button>
+            <p className="wa-bubble-text">Chat with us</p>
             <a
-              className="wa-popup-btn"
+              className="wa-bubble-link"
               href="https://wa.me/971503247488?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
               target="_blank"
               rel="noreferrer"
             >
-              <MessageCircle size={18} />
-              Open WhatsApp
+              +971 50 324 7488
             </a>
           </div>
         ) : null}
-        <button
-          type="button"
-          className="wa-toggle"
-          aria-label={whatsappOpen ? 'Hide WhatsApp chat prompt' : 'Show WhatsApp chat prompt'}
-          onClick={() => setWhatsappOpen((v) => !v)}
+        <a
+          className="wa-toggle wa-toggle-float"
+          href="https://wa.me/971503247488?text=Hello%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
+          target="_blank"
+          rel="noreferrer"
+          aria-label="Chat on WhatsApp"
         >
-          {whatsappOpen ? <ChevronDown size={22} /> : <MessageCircle size={24} />}
-        </button>
+          <MessageCircle size={26} />
+        </a>
       </div>
     </div>
   )
