@@ -14,7 +14,6 @@ import {
   Mail,
   MapPin,
   Menu,
-  MessageCircle,
   ShieldCheck,
   Users,
   Wind,
@@ -351,8 +350,6 @@ function App() {
             <div className="service-grid">
               {services.map((service) => {
                 const Icon = service.icon
-                const waMessage = `Hello, I'm interested in ${service.title} services from Traits Core.`
-                const waUrl = `https://wa.me/971503247488?text=${encodeURIComponent(waMessage)}`
                 return (
                   <article className="service-card reveal" key={service.title}>
                     <div className="service-image">
@@ -372,14 +369,9 @@ function App() {
                           ))}
                         </ul>
                       ) : null}
-                      <div className="service-actions">
-                        <a className="service-enquire" href="#contact">
-                          Enquire Now <ArrowRight size={14} />
-                        </a>
-                        <a className="service-whatsapp" href={waUrl} target="_blank" rel="noreferrer" aria-label={`WhatsApp about ${service.title}`}>
-                          <MessageCircle size={16} />
-                        </a>
-                      </div>
+                      <a className="service-enquire" href="#contact">
+                        Enquire Now <ArrowRight size={14} />
+                      </a>
                     </div>
                   </article>
                 )
