@@ -180,7 +180,24 @@ button { cursor: pointer; }
   color: var(--gold-dark);
 }
 .service-body a { display: inline-flex; align-items: center; gap: 8px; color: var(--ink); font-size: 12px; font-weight: 650; }
-.service-enquire { margin-top: auto; padding-top: 14px; align-self: flex-start; }
+.service-actions {
+  margin-top: auto;
+  padding-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 16px;
+}
+.service-enquire { align-self: auto; }
+.service-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1f6b3b;
+  font-size: 12px;
+  font-weight: 650;
+}
+.service-whatsapp:hover { color: #15552f; }
 
 /* About */
 .about { background: #fff; }

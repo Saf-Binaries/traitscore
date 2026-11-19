@@ -371,9 +371,14 @@ function App() {
                           ))}
                         </ul>
                       ) : null}
-                      <a className="service-enquire" href={waUrl} target="_blank" rel="noreferrer">
-                        Enquire Now <ArrowRight size={14} />
-                      </a>
+                      <div className="service-actions">
+                        <a className="service-enquire" href="#contact">
+                          Enquire Now <ArrowRight size={14} />
+                        </a>
+                        <a className="service-whatsapp" href={waUrl} target="_blank" rel="noreferrer" aria-label={`WhatsApp about ${service.title}`}>
+                          WhatsApp
+                        </a>
+                      </div>
                     </div>
                   </article>
                 )
